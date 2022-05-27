@@ -2,6 +2,11 @@
   "name": "renderfy",
   "version": "0.1.0",
   "private": true,
+  "author": {
+    "email": "eddyhdzg@gmail.com",
+    "name": "Eddy Hernandez",
+    "url": "https://eddyhdzg.com/"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
