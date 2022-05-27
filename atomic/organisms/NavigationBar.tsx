@@ -25,7 +25,7 @@ import FolderIcon from "@mui/icons-material/Folder";
 
 const settings = ["Opción 1", "Opción 2", "Opción 3", "Opción 4"];
 
-const ResponsiveAppBar = () => {
+const NavigationBar = () => {
   const [_, setAnchorElNav] = useState<null | HTMLElement>(null);
   const [anchorElUser, setAnchorElUser] = useState<null | HTMLElement>(null);
 
@@ -182,4 +182,4 @@ const ResponsiveAppBar = () => {
     </AppBar>
   );
 };
-export default ResponsiveAppBar;
+export default NavigationBar;
