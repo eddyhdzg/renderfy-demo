@@ -1,3 +1,4 @@
+import { Icon } from "@chakra-ui/react";
 import CloudUploadOutlinedIcon from "@mui/icons-material/CloudUploadOutlined";
 import Image from "next/image";
 
@@ -26,13 +27,6 @@ export const uploadOptions = [
   },
   {
     text: "Local",
-    Icon: (
-      <CloudUploadOutlinedIcon
-        fontSize="large"
-        sx={{
-          color: "common.white",
-        }}
-      />
-    ),
+    Icon: <Icon as={CloudUploadOutlinedIcon} w={32} h={32} />,
   },
 ];

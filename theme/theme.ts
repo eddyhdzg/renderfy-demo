@@ -1,57 +1,59 @@
-import { createTheme, responsiveFontSizes } from "@mui/material/styles";
+import { extendTheme, theme as chakraTheme } from "@chakra-ui/react";
+import { createBreakpoints } from "@chakra-ui/theme-tools";
 
-// Create a theme instance.
-const theme = createTheme({
-  palette: {},
-  typography: {
-    fontFamily:
-      "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
-    h1: {
-      fontWeight: 700,
-      lineHeight: "135%",
+const fonts = {
+  ...chakraTheme.fonts,
+  body: `Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"`,
+  heading: `Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"`,
+};
+
+const breakpoints = createBreakpoints({
+  sm: "40em",
+  md: "52em",
+  lg: "64em",
+  xl: "80em",
+});
+
+const borderRadius = {
+  radii: {
+    none: "0",
+    sm: "0.125rem",
+    base: "0.25rem",
+    md: "0.375rem",
+    lg: "0.5rem",
+    xl: "0.75rem",
+    "2xl": "1rem",
+    "3xl": "1.5rem",
+    full: "9999px",
+  },
+};
+
+const theme = extendTheme({
+  semanticTokens: {
+    colors: {
+      text: {
+        default: "#16161D",
+        _dark: "#ade3b8",
+      },
+      heroGradientStart: {
+        default: "#7928CA",
+        _dark: "#e3a7f9",
+      },
+      heroGradientEnd: {
+        default: "#FF0080",
+        _dark: "#fbec8f",
+      },
     },
-    h2: {
-      fontWeight: 700,
-      lineHeight: "135%",
-    },
-    h3: {
-      fontWeight: 700,
-      lineHeight: "135%",
-    },
-    h4: {
-      fontWeight: 600,
-      lineHeight: "135%",
-    },
-    h5: {
-      fontWeight: 600,
-      lineHeight: "135%",
-    },
-    h6: {
-      fontWeight: 700,
-      lineHeight: "135%",
-    },
-    subtitle1: {
-      fontWeight: 600,
-      lineHeight: "150%",
-    },
-    subtitle2: {
-      fontWeight: 500,
-      lineHeight: "150%",
-    },
-    body1: {
-      lineHeight: "150%",
-    },
-    body2: {
-      lineHeight: "150%",
-    },
-    button: {
-      fontWeight: 700,
-      lineHeight: "150%",
-      textTransform: "none",
+    radii: {
+      button: "12px",
     },
   },
+  colors: {
+    black: "#16161D",
+  },
+  fonts,
+  breakpoints,
+  borderRadius,
 });
 
-export default responsiveFontSizes(theme, {
-  disableAlign: true,
-});
+export default theme;

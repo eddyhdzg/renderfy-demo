@@ -4,7 +4,8 @@
   top: 0;
   left: 0;
   position: absolute;
-  background: linear-gradient(-45deg, #9c6af9, #f9da73, #fa8282, #fd4382);
+  background: linear-gradient(-45deg, #400f80, #19012a, #39183e, #090113);
+  /* background: linear-gradient(-45deg, #9c6af9, #f9da73, #fa8282, #fd4382); */
   background-size: 400% 400%;
   -webkit-animation: Gradient 15s ease infinite;
   -moz-animation: Gradient 15s ease infinite;
